@@ -36,12 +36,12 @@ void SQRGBLED::colour(int red, int green, int blue, long duration)
 
 boolean SQRGBLED::isFading()
 {
-
+    return _redLED.isFading || _greenLED.isFading || _blueLED.isFading;
 }
 
 boolean SQRGBLED::isPulsing()
 {
-
+    return _redLED.isPulsing || _greenLED.isPulsing || _blueLED.isPulsing;
 }
 
 #pragma mark - SQSchedularDelegate Methods
