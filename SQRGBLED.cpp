@@ -44,6 +44,26 @@ boolean SQRGBLED::isPulsing()
     return _redLED.isPulsing || _greenLED.isPulsing || _blueLED.isPulsing;
 }
 
+float SQRGBLED::currentRedVal()
+{
+    return _redLED.currentVal();
+}
+
+float SQRGBLED::currentGreenVal()
+{
+    return _greenLED.currentVal();
+}
+
+float SQRGBLED::currentBlueVal()
+{
+    return _blueLED.currentVal();
+}
+
+float SQRGBLED::currentAverageVal()
+{
+    return _redLED.currentVal() + _greenLED.currentVal() + _blueLED.currentVal() / 3;
+}
+
 #pragma mark - SQSchedularDelegate Methods
 unsigned int SQRGBLED::executionInterval()
 {

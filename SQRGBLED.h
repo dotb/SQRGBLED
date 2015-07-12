@@ -21,6 +21,10 @@ public:
     virtual void colour(int red, int green, int blue, long duration);
 	virtual boolean isFading();
 	virtual boolean isPulsing();
+	virtual float currentRedVal();
+	virtual float currentGreenVal();
+	virtual float currentBlueVal();
+	virtual float currentAverageVal();
 
     #pragma mark - SQSchedularDelegate Methods
     virtual unsigned int executionInterval();
